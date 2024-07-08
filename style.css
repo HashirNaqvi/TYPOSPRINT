@@ -1,0 +1,731 @@
+/* General reset and basic styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+}
+
+/* New centered div with one button */
+.bg-light-blue {
+  background-color: #87ceeb !important; /* Light sky blue background */
+  border-radius: 15px; /* Rounded corners */
+  width: fit-content; /* Adjust to fit content */
+  max-width: 100%; /* Ensure div does not exceed viewport width */
+  margin: 0 auto; /* Center align horizontally */
+}
+
+/* Updated: Button style for all buttons */
+button,
+.btn {
+  padding: 12px 24px; /* Increased padding for larger buttons */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-weight: bold; /* Make all button text bold */
+}
+
+button.btn-outline-light {
+  border-color: #ffffff; /* White border */
+  background-color: transparent; /* Transparent background */
+  color: #ffffff;
+}
+
+/* Primary button style */
+.btn-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 204 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 235 153 / var(--tw-bg-opacity));
+  position: relative;
+  display: inline-block;
+  border-width: 2px;
+  padding: 15px 25px;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #fc0; /* shadow matches the button color */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #ffcc00; /* Darken the background on hover */
+}
+
+.btn-primary:active {
+  background-color: #ffcc00;
+  box-shadow: 0 5px 0 #e6ac00; /* shadow matches the button color */
+  transform: translateY(4px);
+}
+
+.btn-primary:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.125rem;
+  right: -0.125rem;
+  z-index: -10;
+  content: "";
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #fc0; /* shadow matches the button color */
+}
+
+/* Secondary button style */
+.btn-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 172 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 244 255 / var(--tw-bg-opacity));
+  position: relative;
+  display: inline-block;
+  border-width: 2px;
+  padding: 15px 25px;
+  font-size: 24px;
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #00acff; /* shadow matches the button color */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn-secondary:hover {
+  background-color: #00acff; /* Darken the background on hover */
+}
+
+.btn-secondary:active {
+  background-color: #00acff;
+  box-shadow: 0 5px 0 #0099cc; /* shadow matches the button color */
+  transform: translateY(4px);
+}
+
+.btn-secondary:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.125rem;
+  right: -0.125rem;
+  z-index: -10;
+  content: "";
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #00acff; /* shadow matches the button color */
+}
+
+/* Button with on-hover effect */
+.btn-on-hover {
+  position: relative;
+  display: inline-block;
+  border-radius: 0.625rem;
+  border-width: 2px;
+  border-color: transparent;
+  padding: 0.625rem 0.9375rem;
+}
+
+.btn-on-hover:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.125rem;
+  right: -0.125rem;
+  z-index: -10;
+  content: "";
+  border-radius: 0.625rem;
+}
+
+/* Adjusted: Change outer div of "Test Your Speed" button to light grey */
+.container.d-flex.justify-content-center.my-4 .bg-info.rounded.shadow {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+/* New: Custom button style to match provided image */
+.btn-outline-light.custom-btn {
+  border: 2px solid #ffd700; /* Gold border */
+  background-color: #fffacd; /* Light yellow background */
+  color: #000; /* Black text color */
+  padding: 14px 28px; /* Increased padding for larger button */
+  font-size: 18px; /* Font size for the button text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.btn-outline-light.custom-btn:hover {
+  background-color: #ffd700; /* Gold background on hover */
+  color: #fff; /* White text color on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* New test certificate section styles */
+.test-certificate {
+  background-color: #f8f9fa; /* Light grey background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 40px; /* Increased padding */
+}
+
+.test-certificate .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+}
+
+.typing-tips {
+  background-color: #00008b; /* Dark blue background */
+  color: #ffffff;
+  border-radius: 15px; /* Rounded corners */
+}
+
+.typing-tips h4 {
+  color: #d3d3d3; /* Light text color */
+}
+
+.typing-tips .tips-button {
+  padding: 12px 24px; /* Adjusted padding for specific button */
+  border: 2px solid #ff0000;
+  background-color: transparent;
+  color: #007bff;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-weight: bold; /* Make button text bold */
+}
+
+.typing-tips .tips-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Add space between divs */
+.my-4 {
+  margin-top: 200px !important; /* Add 200px of vertical space */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #f8f9fa; /* Light grey background */
+  border-radius: 15px;
+}
+
+.footer h5 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+/* Footer social media icons */
+.footer a i {
+  font-size: 24px; /* Increase icon size */
+  margin: 0 10px; /* Add some space between icons */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Official colors for social media icons */
+.footer a i.fa-facebook-f {
+  color: #3b5998; /* Facebook blue */
+}
+
+.footer a i.fa-twitter {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.footer a i.fa-instagram {
+  color: #e1306c; /* Instagram gradient pink */
+}
+
+/* Change color on hover */
+.footer a:hover i.fa-facebook-f {
+  color: #2d4373;
+}
+
+.footer a:hover i.fa-twitter {
+  color: #0d95e8;
+}
+
+.footer a:hover i.fa-instagram {
+  color: #bc2a8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu.open {
+    display: block;
+  }
+  .nav-menu.open ul {
+    display: block;
+  }
+
+  .header .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header .logo,
+  .header .nav,
+  .header > div:last-child {
+    margin-bottom: 10px;
+  }
+
+  .img-01-size {
+    width: 100%;
+    height: auto;
+  }
+
+  .test-certificate .left-side,
+  .test-certificate .right-side,
+  .typing-tips .left-side,
+  .typing-tips .right-side {
+    flex: none;
+    width: auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  .test-certificate,
+  .typing-tips {
+    text-align: center;
+  }
+
+  .container.d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header .logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  .img-01-size {
+    width: 50%;
+    height: auto;
+  }
+
+  .test-certificate .left-side,
+  .test-certificate .right-side,
+  .typing-tips .left-side,
+  .typing-tips .right-side {
+    padding: 20px; /* Increased padding for medium screens */
+  }
+
+  .container.d-flex {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-size {
+    width: 150px;
+    height: auto;
+  }
+
+  .img-01-size {
+    width: 668px;
+    height: 208.75px;
+  }
+}
+
+/* login and registration css */
+.register-form,
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.register-form input,
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form button,
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0073aa;
+  color: #fff;
+  cursor: pointer;
+}
+
+.register-form button:hover,
+.login-form button:hover {
+  background: #005177;
+}
+
+/* typing competition */
+:root {
+  --background-color: #323437;
+  --text-color: #d1d0c5;
+  --text-alt-color: #646669;
+  --main-color: #03f3f7;
+  --sub-color: #2c2e31;
+  --sub-alt-color: #646669;
+  --error-color: #da3333;
+  --spelter-color: #323437;
+  --roundness: 0.5rem;
+  --font: "Roboto Mono", "Vazirmatn", monospace;
+  scroll-padding-top: 2rem;
+  font-weight: 400;
+}
+
+.light-mode {
+  --background-color: #e1e1e3;
+  --text-color: #323437;
+  --text-alt-color: #aaaeb2;
+  --main-color: #e2b714;
+  --sub-color: #d1d3d9;
+  --sub-alt-color: #aaaeb2;
+  --error-color: #fa1616;
+  --spelter-color: #e1e1e3;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font);
+  min-height: 100vh;
+  transition: all 0.5s;
+  user-select: none;
+} */
+
+.typing-test {
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-rows: 50px 1fr 100px;
+  gap: 20px;
+  font-size: large;
+}
+
+/* main {
+  display: grid;
+  grid-template-rows: minmax(150px, auto) 30px 1fr;
+} */
+
+.test-config {
+  background-color: var(--sub-color);
+  display: flex;
+  font-size: 12px;
+  width: 800px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 6px;
+  color: var(--text-alt-color);
+}
+
+.test-config.hide {
+  display: none;
+}
+
+.config {
+  display: flex;
+  flex-basis: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0.65rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.spelter {
+  width: 4px;
+  height: 20px;
+  margin: 0 10px;
+  background-color: var(--spelter-color);
+}
+
+.config input {
+  appearance: none;
+}
+
+.config label {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.config label:hover {
+  color: var(--text-color);
+}
+
+.config input:checked + label {
+  color: var(--main-color);
+}
+
+.time-word-config.time label::after {
+  content: "s";
+}
+
+#tools {
+  margin-left: 20px;
+}
+
+.test-results {
+  /* margin: 20px auto 30px; */
+  width: 420px;
+  display: none;
+}
+
+.test-results.show {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result .result-value {
+  color: var(--main-color);
+}
+
+.result .result-head {
+  font-size: 16px;
+}
+
+.result.big-text .result-head {
+  font-size: 28px;
+}
+
+.result.big-text .result-value {
+  font-size: 48px;
+}
+
+.test-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.typing-test {
+  font-size: 24px;
+  color: var(--text-alt-color);
+}
+
+#testModesNotice {
+  display: flex;
+  height: 10px;
+  flex-wrap: wrap;
+  color: var(--sub-color);
+  text-align: center;
+  transition: opacity 0.125s;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.typing-test .time-word-info {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  min-height: 32px;
+}
+
+.typing-test .test {
+  position: relative;
+}
+
+.typing-test .test-text {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+.typing-test .test .word {
+  display: flex;
+}
+
+.typing-test .test .letter {
+  min-width: 1ch;
+  display: inline-block;
+  border-left: 2px solid transparent;
+}
+
+.typing-test .test .letter.last {
+  min-width: 1ch;
+  display: inline-block;
+  border: none;
+  margin-left: 2px;
+  border-right: 2px solid transparent;
+}
+
+.typing-test .test.shadow {
+  color: transparent;
+  text-shadow: 0 0 5px rgb(100, 102, 105, 0.5);
+}
+
+.typing-test .test .letter.cursor {
+  border-color: var(--main-color);
+  animation: blinker 1s linear infinite;
+}
+
+.typing-test .test .letter.correct {
+  color: var(--text-color);
+}
+
+.typing-test .test .letter.wrong {
+  color: var(--error-color);
+}
+
+.typing-test .test .letter.wrong-space {
+  background-color: var(--error-color);
+}
+
+.typing-test .test .letter.updated {
+  color: var(--main-color);
+}
+
+.typing-test .test .letter.updated-space {
+  background-color: var(--main-color);
+}
+
+.typing-test .test .overlay {
+  color: var(--text-color);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 18px;
+}
+
+.typing-test .test .overlay.hide {
+  display: none;
+}
+
+#restartTestButton {
+  margin: 1rem auto 0;
+  display: flex;
+  padding: 1em 2em;
+  border: none;
+  background-color: var(--background-color);
+  color: var(--sub-alt-color);
+  transition: none;
+}
+
+#restartTestButton i {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+#userInput {
+  opacity: 0;
+  position: absolute;
+  z-index: -100;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+@keyframes blinker {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+/* Remove border from the nav element */
+nav.nav.mx-auto {
+  border: none;
+}
+/* custom-admin.css */
+
+.custom-dashboard {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.custom-dashboard h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-table th {
+  background-color: #f4f4f4;
+}
+
+.custom-table tr:hover {
+  background-color: #f9f9f9;
+}
+/* New Heading for DEMO as Button */
+.container.text-center {
+  margin-top: 100px; /* Add 100px space above the container */
+  margin-bottom: 100px; /* Add 100px space below the container */
+}
+
+.demo-btn {
+  margin-top: 100px; /* Add 100px space above the button */
+  margin-bottom: 100px; /* Add 100px space below the button */
+}
+
+.demo-btn strong {
+  display: block; /* Ensures text is centered properly */
+}
+.margin-top-300 {
+  margin-top: 300px;
+}
